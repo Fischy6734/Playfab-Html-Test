@@ -9,9 +9,9 @@ function sendUsernameToPlayFab(username) {
     const titleId = 'E5EAA';
     const secretKey = 'HDC9RMFU6YYAN4WY7D7ZGM1SSZMFAEKMPPWZD97BZUG3NG1KMX';
 
-    const url = `https://${E5EAA}.playfabapi.com/Client/LoginWithCustomID`;
+    const url = `https://${titleId}.playfabapi.com/Client/LoginWithCustomID?sdk=JavaScriptSDK`;
     const data = {
-        TitleId: E5EAA,
+        TitleId: titleId,
         CustomId: username,
         CreateAccount: true
     };
@@ -20,7 +20,7 @@ function sendUsernameToPlayFab(username) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'X-SecretKey': HDC9RMFU6YYAN4WY7D7ZGM1SSZMFAEKMPPWZD97BZUG3NG1KMX
+            'X-SecretKey': secretKey
         },
         body: JSON.stringify(data)
     })
