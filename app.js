@@ -6,12 +6,12 @@ document.getElementById('submit-btn').addEventListener('click', function() {
 });
 
 function sendUsernameToPlayFab(username) {
-    const titleId = 'YOUR_PLAYFAB_TITLE_ID';
-    const secretKey = 'YOUR_PLAYFAB_SECRET_KEY';
+    const titleId = 'E5EAA';
+    const secretKey = 'HDC9RMFU6YYAN4WY7D7ZGM1SSZMFAEKMPPWZD97BZUG3NG1KMX';
 
-    const url = `https://${titleId}.playfabapi.com/Client/LoginWithCustomID`;
+    const url = `https://${E5EAA}.playfabapi.com/Client/LoginWithCustomID`;
     const data = {
-        TitleId: titleId,
+        TitleId: E5EAA,
         CustomId: username,
         CreateAccount: true
     };
@@ -20,7 +20,7 @@ function sendUsernameToPlayFab(username) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'X-SecretKey': secretKey
+            'X-SecretKey': HDC9RMFU6YYAN4WY7D7ZGM1SSZMFAEKMPPWZD97BZUG3NG1KMX
         },
         body: JSON.stringify(data)
     })
